@@ -12,12 +12,12 @@ jobs:
     runs-on: windows-latest
     env:
       PROJECT_DIRECTORY_PATH: "CICDTraining"
-      IIS_SERVER_COMPUTER_NAME: ${{ secrets.IIS_SERVER_COMPUTER_NAME }}
-      IIS_WEBSITE_NAME: ${{ secrets.IIS_WEBSITE_NAME }}
-      IIS_SERVER_USERNAME: ${{ secrets.IIS_SERVER_USERNAME }}
-      IIS_SERVER_PASSWORD: ${{ secrets.IIS_SERVER_PASSWORD }}
-      RECYCLE_APP_NAME: ${{ secrets.RECYCLE_APP_NAME }}
-      WEBSITE_CONTENT_PATH: ${{ secrets.WEBSITE_CONTENT_PATH }}
+      IIS_SERVER_COMPUTER_NAME: ${{ env.IIS_SERVER_COMPUTER_NAME }}
+      IIS_WEBSITE_NAME: ${{ env.IIS_WEBSITE_NAME }}
+      IIS_SERVER_USERNAME: ${{ env.IIS_SERVER_USERNAME }}
+      IIS_SERVER_PASSWORD: ${{ env.IIS_SERVER_PASSWORD }}
+      RECYCLE_APP_NAME: ${{ env.RECYCLE_APP_NAME }}
+      WEBSITE_CONTENT_PATH: ${{ env.WEBSITE_CONTENT_PATH }}
 
     steps:
     - uses: actions/checkout@v2
